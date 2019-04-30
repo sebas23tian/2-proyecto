@@ -1,0 +1,171 @@
+body{
+  margin: 1%;
+  background-color: #02010A;
+}
+#cabecera{
+  background-color: #5B7989;
+  padding: 2%;
+  border: solid purple 1px;
+  border-radius: 10px 10px 0 0;
+  }
+a{
+  font-family: 'Dancing Script';
+  color: black;
+  padding: 1%;
+}
+.contenedor {
+  max-width: 900px;
+	margin: 0;
+  padding: 0;
+  display: block;
+	flex-flow: column wrap;
+}
+.principal{
+  text-align: center;
+  padding: 2%;
+  background-color: #82C3A6;
+ }
+
+.secundario{
+  padding: 2%;
+  background-color: #D5C75F;
+  border: solid 1px purple;
+  font-family: 'Dancing Script';
+  font-color: black;
+}
+.secundario div h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.piepagina{
+  background-color: #C6D5C5;
+  border-radius: 0 0 10px 10px;
+  padding: 3%;
+  font-family: 'Dancing Script';
+  color: black;
+  font-size: 14pt;
+}
+.cabecera> h1{
+  font-family: 'Dancing Script';
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px 20px #02010A;
+}
+.link> a{
+  font-family: 'Dancing Script';
+  font-size: 14pt;
+  color: white !important;
+  word-spacing: 20px;
+}
+.galeria{
+  padding: 3%;
+  background-color: #D5C75F;
+  border: solid 1px purple;
+}
+img{
+  width: 25%;
+  border: solid 1px black;
+  box-shadow: 1px 1px black;
+}
+
+#paisajes{
+  transition-property: transform:rotate(10deg);
+  transition-duration: 1.5s;
+  text-align: center;
+}
+#paisajes:hover{
+  transform: rotate(10deg);
+  box-shadow: 3px 3px #82C3A6;
+}
+
+#retratos{
+  transition-property: transform: translate(20px , -5px);
+  transition-duration: 1.5s;
+  text-align: center;
+}
+#retratos:hover{
+  transform: translate(20px , -5px);
+  box-shadow: 3px 3px #82C3A6;
+}
+
+
+/*----- ajustes generales hechos---------- */
+/*----------------------------------------*/
+
+/* TODO: generar el responsive primero para menor a 900px  */
+
+@media all and (max-width:899px){
+  body{
+    margin: 1%;
+    min-width: 300px;
+  }
+  .cabecera{
+    width: 100vw;
+    height: 15vh;
+    order: 1;
+  }
+  .contenedor{
+    width: 100vw;
+  text-align: center;
+  }
+ .link{
+    text-align: center;
+  }
+  .principal{
+    order: 2;
+  }
+  .paisajes{
+
+    order: 4;
+  }
+  .retratos{
+
+    order: 5;
+  }
+  .piepagina{
+
+    order: 6;
+  }
+  #princi, #paisajes, #retratos{
+    height: 90%;
+    width: 80%;
+    border: 0.8%;
+  }
+}
+
+
+
+@media (min-width:900px){
+  .link{
+    float: right;
+    /*margin-top: 5%;
+    margin-left: 65%;
+    margin-right: : 3%;
+    display: flex;*/
+  }
+    #princi{
+      height:90vh;
+      width:80vw;
+      margin: 1vw;
+    }
+
+ #paisajes, #retratos{
+      height: 50vh;
+      width: 40vw;
+      margin: 1vw;
+    }
+    .paisajes, .retratos{
+        display: inline-block;
+        text-align: center;
+    }
+    .principal{
+      width: 96%;
+    }
+    .paisajes{
+      width: 20%;
+    }
+    .retratos{
+      width: 20%;
+    }
+  }
