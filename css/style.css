@@ -11,7 +11,6 @@ body{
 #cabecera{
   background-color: #5B7989;
   padding: 2%;
-  border: solid purple 1px;
   border-radius: 10px 10px 0 0;
   }
   a{
@@ -27,7 +26,6 @@ body{
  .secundario{
    padding: 0.5%;
    background-color: #D5C75F;
-   border: solid 1px purple;
    font-family: 'Dancing Script';
    font-color: black;
    text-align: center;
@@ -35,7 +33,6 @@ body{
  .secundario div h2{
    text-align: center;
    margin: 0;
-/*   font-size: 2rem;   */
  }
  #piepagina{
   background-color: #C6D5C5;
@@ -53,12 +50,22 @@ body{
 }
 .link> a{
   font-family: 'Dancing Script';
-  font-size: 14pt;
-  font-weight: bold;
+  font-size: 16pt;
+  font-weight: lighter;
   color: white !important;
-  word-spacing: 25px;
   margin: auto;
   display: inline-block;
+  text-decoration: none;
+  padding: 2%;
+}
+.link> ins> a{
+  font-family: 'Dancing Script';
+  font-size: 16pt;
+  font-weight:lighter;
+  color: white !important;
+  margin: auto;
+  display: inline-block;
+  padding: 2%;
 }
 .galeria{
   padding: 3%;
@@ -80,6 +87,14 @@ img{
 .redes> a> img, h3{
   text-align: justify;
   display: inline-block;
+}
+.term{
+  font: 'arial';
+  font-size: 12pt;
+  font-weight:lighter;
+  background-color: white;
+  color: red !important;
+  text-align: justify;
 }
 #gal1{
   -webkit-filter: blur(10px);
@@ -181,7 +196,7 @@ img{
     padding-left: 45%;
   }
   .social> a> img{
-    width: 10%;
+    width: 7%;
     border: none;
     box-shadow: none;
   }
@@ -194,7 +209,6 @@ img{
     width: 90%;
     margin: 2%;
   }
-
 }
 
 /*----FIN--RESPONSIVE MOVIL-----------*/
@@ -219,10 +233,12 @@ img{
     }
   .secundario{
       padding-top: 2%;
+      display: flex;
     }
   .paisajes, .retratos{
-      display: inline-block;
-      padding: 1%;
+      display: flex;
+      flex-direction: row;
+      padding: 2%;
     }
   .paisajes{
       width: 45%;
@@ -237,7 +253,7 @@ img{
       width: auto;
     }
     .social> a> img{
-      width: 17%;
+      width: 15%;
       border: none;
       box-shadow: none;
     }
@@ -250,16 +266,18 @@ img{
     }
     .galeria{
       padding: 2%;
+
     }
     .galeria> img{
       width: 28%;
-      margin: 2%;
+      margin: 2.4%;
     }
 }
 
 /*-----FIN -DESKTOP-----------*/
 
 /*----- ANIMACIONES---------- */
+
 #paisajes{
   transition-property: transform:rotate(10deg);
   transition-duration: 1.5s;
@@ -278,5 +296,19 @@ img{
 #retratos:hover{
   transform: translate(20px , -5px);
   box-shadow: 3px 3px #82C3A6;
+}
+#cabecera{
+	animation: slide 1s;
+}
+@keyframes slide{
+	0%{
+		margin-top: 160%;
+  }
+	60%{
+		margin-top: -5%;
+  }
+	100%{
+		margin-top: 0%;
+	}
 }
 /*-----FIN  ANIMACIONES---------- */
